@@ -1,6 +1,6 @@
 #!/system/bin/sh
 
-MODDIR=${0%/*}
+MODDIR="/data/adb/modules/$MODID/"
 LOG="$MODDIR/screenshot-hires.log"
 CONF="$MODDIR/resolution.conf"
 
