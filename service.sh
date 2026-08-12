@@ -5,8 +5,9 @@
 #   只要这两个值非零, 就直接用它们作为截图输出分辨率(无需 hook)
 # 默认: 2560x1440 (16:9), 可用 toggle.sh 改成其他值或关闭
 MODDIR=${0%/*}
+MODULES_DIR="/data/adb/modules"
 LOG="$MODDIR/screenshot-hires.log"
-CONF="$MODDIR/resolution.conf"
+CONF="$MODULES_DIR/screenshot_hires_resolution.conf"
 
 log(){ echo "[$(date +%H:%M:%S)] $*" >> "$LOG"; }
 

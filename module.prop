@@ -4,3 +4,4 @@ version=1.0
 versionCode=1
 author=Horizon
 description=Unlock PICO 4 system screenshot resolution to 2560x1440 (sets pvr.video.resolution.width/height). Pure Settings.Global, no hook needed.
+action=action.sh
