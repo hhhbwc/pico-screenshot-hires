@@ -5,8 +5,9 @@
 #   sh toggle.sh off            关闭(恢复系统默认 1920x1920)
 #   sh toggle.sh 3200 1800      设置自定义分辨率并启用
 MODDIR=${0%/*}
+MODULES_DIR="/data/adb/modules"
 LOG="$MODDIR/screenshot-hires.log"
-CONF="$MODDIR/resolution.conf"
+CONF="$MODULES_DIR/screenshot_hires_resolution.conf"
 
 log(){ echo "[$(date +%H:%M:%S)] $*" >> "$LOG"; }
 
