@@ -1,0 +1,16 @@
+# Magisk 模块脚本在 Android 上必须用 LF。
+# Windows 上编辑后若带 CRLF，sh 会把 shebang 解析成 "/system/bin/sh\r"，
+# 表现为 service.sh 静默不执行或报 "bad number" / "syntax error"。
+* text=auto eol=lf
+
+*.sh    text eol=lf
+*.prop  text eol=lf
+*.txt   text eol=lf
+*.cfg   text eol=lf
+*.md    text eol=lf
+
+# 二进制资源不参与行尾转换
+*.apk   binary
+*.so    binary
+*.jar   binary
+*.zip   binary
