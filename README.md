@@ -57,7 +57,7 @@ su -c "sh /data/adb/modules/screenshot_hires/toggle.sh 3200 1800"   # 自定义�
 
 改完**下一张截图即时生效**(服务每次现读),无需重启。
 
-分辨率存于 `resolution.conf`(`ENABLE` / `W` / `H`)。
+分辨率存于 `screenshot_hires_resolution.conf`(`ENABLE` / `W` / `H`)。
 
 ## 手动改 (不装模块)
 
@@ -75,7 +75,7 @@ screenshot-hires-mod/
 ├─ module.prop      # Magisk 模块元信息
 ├─ service.sh       # 开机自启设置分辨率 (等待 boot_completed)
 ├─ toggle.sh        # 手动开关/自定义分辨率
-└─ resolution.conf  # (运行时生成) ENABLE/W/H
+└─ screenshot_hires_resolution.conf  # (运行时生成) ENABLE/W/H
 ```
 
 ## 构建模块 zip
@@ -93,7 +93,7 @@ zip -r ../screenshot-hires-mod.zip . -x '*.git*'
 ```sh
 logcat -d | grep -iE 'new resolution|prepareScreen'
 ```
-- 设置前: `new resolution value: 0 0` , `settings: (1920, 1920)`
+- 设置前: `new resolution value: 0 0`, `settings: (1920, 1920)`
 - 设置后: `new resolution value: 2560 1440`, `settings: (2560, 1440)`
 
 图片存于 `/sdcard/Pictures/Screenshots/`, 可直接 pull 对比分辨率。
